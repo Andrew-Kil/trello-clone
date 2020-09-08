@@ -1,10 +1,9 @@
 import React from "react";
-
 import { Column } from "./Column";
-import { AddNewItem } from "./AddNewItem";
-import { useAppState } from "./AppStateContext";
-
 import { AppContainer } from "./styles";
+import { useAppState } from "./AppStateContext";
+import { AddNewItem } from "./AddNewItem";
+import { DragItem } from "./DragItem";
 
 interface Task {
   id: string;
@@ -19,6 +18,7 @@ interface List {
 
 export interface AppState {
   lists: List[];
+  draggedItem: DragItem | undefined;
 }
 
 const App = () => {
